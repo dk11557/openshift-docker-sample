@@ -1,4 +1,4 @@
-FROM rhel
+FROM centos
 
 # RUN echo "[Artifactory]" >> /etc/yum.repos.d/artifactory.repo && \
 #     echo "name=Artifactory" >> /etc/yum.repos.d/artifactory.repo && \
