@@ -48,7 +48,7 @@ RUN mkdir -p ${APP_ROOT}/ansible_temp && \
 # RUN pip3 install ansible --user
 #RUN pip install -U ${APP_ROOT}/bin/MarkupSafe-1.1.1.tar.gz
 #RUN pip install -U ${APP_ROOT}/bin/Jinja2-2.10.3.tar.gz
-#RUN pip3 install -U ${APP_ROOT}/bin/ibm_db-3.0.1.tar.gz
+RUN pip3 install -U ${APP_ROOT}/bin/ibm_db-3.0.1.tar.gz
 
 
 USER 1001
