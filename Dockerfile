@@ -8,7 +8,8 @@ FROM centos
 
 RUN \
 #yum install -y ansible && \
-    yum -y install python-pip && \
+    #yum -y install python-pip && \
+    dnf install python3-pip && \
     yum install gcc -y && \
     yum install python-devel -y && \
     yum clean all -y
