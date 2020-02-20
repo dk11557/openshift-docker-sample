@@ -54,6 +54,6 @@ RUN mkdir -p ${APP_ROOT}/ansible_temp && \
 USER 1001
 WORKDIR ${APP_ROOT}
 
-ENTRYPOINT [ "uid_entrypoint" ]
+#ENTRYPOINT [ "uid_entrypoint" ]
 
 CMD exec /bin/sh -c "trap : TERM INT; (while true; do sleep 1000; done) & wait"
