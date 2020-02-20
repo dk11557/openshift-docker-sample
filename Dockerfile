@@ -17,7 +17,7 @@ RUN \
 
 #RUN dnf install python3-pip -y
 RUN pip3 install ansible --user
-RUN pip3 install Jinja2 && pip show Jinja2
+RUN pip3 install Jinja2 && pip3 show Jinja2
 
 #RUN useradd -ms /bin/bash demo
 #RUN echo demo:demo | chpasswd
