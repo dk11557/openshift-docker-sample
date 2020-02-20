@@ -16,7 +16,8 @@ RUN \
     yum clean all -y
 
 RUN pip install Jinja2 && pip show Jinja2
-
+RUN dnf install python3-pip
+RUN pip3 install ansible --user
 #RUN useradd -ms /bin/bash demo
 #RUN echo demo:demo | chpasswd
 
@@ -42,8 +43,8 @@ RUN mkdir -p ${APP_ROOT}/ansible_temp && \
 #ADD bin/linuxx64_odbc_cli.tar.gz ${APP_ROOT}/db2_client
 
 
-RUN dnf install python3-pip
-RUN pip3 install ansible --user
+# RUN dnf install python3-pip
+# RUN pip3 install ansible --user
 #RUN pip install -U ${APP_ROOT}/bin/MarkupSafe-1.1.1.tar.gz
 #RUN pip install -U ${APP_ROOT}/bin/Jinja2-2.10.3.tar.gz
 #RUN pip install -U ${APP_ROOT}/bin/ibm_db-3.0.1.tar.gz
