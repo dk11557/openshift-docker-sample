@@ -12,7 +12,7 @@ RUN \
     dnf update -y && \
     dnf install python3-pip -y && \
     dnf install gcc -y && \
-  #  dnf install python-devel -y && \
+    dnf install python3-devel -y && \
     dnf clean all -y
 
 #RUN dnf install python3-pip -y
@@ -25,7 +25,7 @@ RUN pip3 install Jinja2 && pip3 show Jinja2
 ENV APP_ROOT=/ansible
 ENV ANSIBLE_LOCAL_TEMP=${APP_ROOT}/ansible_temp
 ENV PATH=${APP_ROOT}/bin:${PATH} HOME=${APP_ROOT}
-ENV IBM_DB_HOME=/ansible/db2_client/clidriver
+#ENV IBM_DB_HOME=/ansible/db2_client/clidriver
 
 # COPY ./inventory/ ${APP_ROOT}/deployment/inventory/
 # COPY ./playbooks/ ${APP_ROOT}/deployment/playbooks/
