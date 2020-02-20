@@ -11,9 +11,9 @@ RUN \
     #yum -y install python-pip && \
     dnf update -y && \
     dnf install python3-pip -y && \
-    yum install gcc -y && \
-    yum install python-devel -y && \
-    yum clean all -y
+    dnf install gcc -y && \
+    dnf install python-devel -y && \
+    dnf clean all -y
 
 RUN pip install Jinja2 && pip show Jinja2
 RUN dnf install python3-pip
