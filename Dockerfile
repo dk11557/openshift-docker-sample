@@ -12,7 +12,7 @@ RUN \
     dnf update -y && \
     dnf install python3-pip -y && \
     dnf install gcc -y && \
-    dnf install python-devel -y && \
+  #  dnf install python-devel -y && \
     dnf clean all -y
 
 RUN pip install Jinja2 && pip show Jinja2
