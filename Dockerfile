@@ -6,7 +6,8 @@ FROM centos
 #     echo "enabled=1" >> /etc/yum.repos.d/artifactory.repo && \
 #     echo "gpgcheck=0" >> /etc/yum.repos.d/artifactory.repo
 
-RUN yum install -y ansible && \
+RUN \
+#yum install -y ansible && \
     yum -y install python-pip && \
     yum install gcc -y && \
     yum install python-devel -y && \
@@ -39,11 +40,11 @@ RUN mkdir -p ${APP_ROOT}/ansible_temp && \
 #ADD bin/linuxx64_odbc_cli.tar.gz ${APP_ROOT}/db2_client
 
 
-RUN ansible --version
-RUN id
-RUN pip install -U ${APP_ROOT}/bin/MarkupSafe-1.1.1.tar.gz
-RUN pip install -U ${APP_ROOT}/bin/Jinja2-2.10.3.tar.gz
-RUN pip install -U ${APP_ROOT}/bin/ibm_db-3.0.1.tar.gz
+RUN dnf install python3-pip
+RUN pip3 install ansible --user
+#RUN pip install -U ${APP_ROOT}/bin/MarkupSafe-1.1.1.tar.gz
+#RUN pip install -U ${APP_ROOT}/bin/Jinja2-2.10.3.tar.gz
+#RUN pip install -U ${APP_ROOT}/bin/ibm_db-3.0.1.tar.gz
 
 
 USER 1001
